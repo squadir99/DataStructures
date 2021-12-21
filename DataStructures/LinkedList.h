@@ -24,3 +24,4 @@ void* addNode(LinkedList* list, Node n); //Adds a node to the end of the list
 
 void pop(LinkedList* list); // Pops last element off list
 
+void find(LinkedList* list, int data); //This function will search for a given value in the list

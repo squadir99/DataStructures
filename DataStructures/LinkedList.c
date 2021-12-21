@@ -43,7 +43,7 @@ void* ListDestructor(LinkedList* list) {
 	}
 	free(list->head);
 	list->head = NULL;
-
+	free(list);
 }
 
 void* printList(LinkedList* list, Node* currNode) {
@@ -93,4 +93,18 @@ void pop(LinkedList* list) {
 	free(temp->next);
 	temp->next = NULL;
 	list->tail = temp;
+}
+
+void find(LinkedList* list, int data) {
+	Node* n = list->head;
+	while (n != NULL) {
+		if (n->data == data) {
+			fprintf(stdout, "%d found\n", data);
+			return;
+		}
+		else {
+			n = n->next;
+		}
+	}
+	fprintf(stdout, "%d not in given list\n", data);
 }

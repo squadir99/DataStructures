@@ -4,9 +4,10 @@ In this file, I use the data structures to perform operations using the data str
 */
 #include <stdio.h>
 #include "LinkedList.h"
+#include "BST.h"
 
 int main(int argc, const char* argv[]) {
-
+	/*
 	LinkedList* test = ListConstructor();
 
 	printList(test, test->head);
@@ -18,24 +19,26 @@ int main(int argc, const char* argv[]) {
 
 	addNode(test, newNode);
 
-	printList(test, test->head);
-	printf("\n");
-
 	Node lastNode;
 	lastNode.data = 13;
 	lastNode.next = NULL;
 
 	addNode(test, lastNode);
 
-	printList(test, test->head);
-	printf("\n");
+	find(test, 13);
 
 	pop(test);
 
-	printList(test, test->head);
-	printf("\n");
+	find(test, 12);
 
 	ListDestructor(test);
+	*/
+
+	TreeNode* test = TreeConstructor();
+	pushToTree(test, -3);
+	pushToTree(test, 5);
+	pushToTree(test, 8);
+	printTree(test);
 
 	fprintf(stdout, "Main file ends\n");
 	return 0;
